@@ -1,0 +1,208 @@
+- id: no-merge-commits
+  name: Don't create merge commits
+  entry: Prefer rebase workflow to merge commits
+  language: fail
+  stages:
+    - merge-commit
+  description: >
+    For projects that use rebase rather than merge workflows, this hook makes it
+    easy to enforce that policy. See
+    https://www.atlassian.com/git/tutorials/merging-vs-rebasing for more
+    details.
+
+- id: asdf-install
+  name: Install correct versions of tools managed by asdf
+  entry: asdf install
+  language: system
+  always_run: true
+  pass_filenames: false
+  stages:
+    - commit
+    - push
+    - post-checkout
+  description: >
+    Install or set versions of asdf-managed tools based on .tool-versions unless
+    otherwise configured. See
+    https://asdf-vm.com/manage/configuration.html#tool-versions for more
+    details.
+
+- id: poetry-check
+  name: Validate structure of pyproject.toml
+  entry: poetry check
+  language: system
+  files: \.tool-versions|pyproject\.toml
+  pass_filenames: false
+  description: >
+    Check that Poetry dependencies are properly specified. See
+    https://python-poetry.org/docs/cli/#check for more details.
+
+- id: poetry-lock
+  name: Lock Poetry dependencies
+  entry: poetry lock
+  language: system
+  files: \.tool-versions|poetry\.lock|pyproject\.toml
+  pass_filenames: false
+  description: >
+    Update poetry.lock to match pyproject.toml without upgrading already locked
+    dependencies. See https://python-poetry.org/docs/cli/#options-9 for more
+    details.
+  args: [--no-update]
+
+- id: poetry-install
+  name: Install Poetry dependencies
+  entry: poetry install
+  language: system
+  always_run: true
+  pass_filenames: false
+  stages:
+    - commit
+    - push
+    - post-checkout
+  description: >
+    Install all Poetry dependencies from poetry.lock. See
+    https://python-poetry.org/docs/cli/#install for more details.
+
+- id: pre-commit-install
+  name: Install pre-commit hooks
+  entry: poetry run pre-commit install
+  language: system
+  always_run: true
+  pass_filenames: false
+  stages:
+    - commit
+    - push
+    - post-checkout
+  description: >
+    Install commit message, post-checkout, pre-commit, pre-merge commit, and
+    pre-push hooks. Also, install environments for all available hooks. Ensure
+    that updates to pre-commit's git hook script are applied. See
+    https://pre-commit.com/#pre-commit-install for more details.
+  args:
+    - --hook-type
+    - commit-msg
+    - --hook-type
+    - post-checkout
+    - --hook-type
+    - pre-commit
+    - --hook-type
+    - pre-merge-commit
+    - --hook-type
+    - pre-push
+    - --install-hooks
+
+- id: megalinter
+  name: Run MegaLinter on files modified relative to default branch (skipping jscpd)
+  entry: >
+    npx -- mega-linter-runner@v5.10.0
+    --fix
+    --env LOG_LEVEL=warning
+    --env VALIDATE_ALL_CODEBASE=false
+    --env DISABLE_LINTERS=COPYPASTE_JSCPD
+  language: system
+  pass_filenames: false
+  stages:
+    - commit
+  description: >
+    See https://megalinter.github.io/latest/mega-linter-runner/#usage and
+    https://megalinter.github.io/latest/configuration/ if you wish to override
+    the default arguments. mega-linter-runner is specified as an argument so
+    that you may override the version (e.g., mega-linter-runner@vx.y.z). Depends
+    on npx, which ships with npm 7+, and Docker. Unlike most pre-commit hooks,
+    MegaLinter computes the files to run on itself. If you encounter permission
+    errors, try running Docker in rootless mode:
+    https://github.com/marketplace/actions/rootless-docker/. Runs very slowly
+    when the pertinent Docker image isn't already cached. Linter results are
+    logged to the report directory, so you should make sure to list it in your
+    .gitignore and wipe it between runs. Skip jscpd since duplicate detection
+    fundamentally requires scanning the entire repository and hence can't be
+    performed incrementally.
+
+- id: megalinter-all
+  name: Run MegaLinter on all files
+  entry: >
+    npx -- mega-linter-runner@v5.10.0
+    --fix
+    --env LOG_LEVEL=warning
+  language: system
+  pass_filenames: false
+  stages:
+    - push
+  description: >
+    See https://megalinter.github.io/latest/mega-linter-runner/#usage and
+    https://megalinter.github.io/latest/configuration/ if you wish to override
+    the default arguments. mega-linter-runner is specified as an argument so
+    that you may override the version (e.g., mega-linter-runner@vx.y.z). Depends
+    on npx, which ships with npm 7+, and Docker. If you encounter permission
+    errors, try running Docker in rootless mode:
+    https://github.com/marketplace/actions/rootless-docker/. Runs very slowly
+    when the pertinent Docker image isn't already cached. Linter results are
+    logged to the report directory, so you should make sure to list it in your
+    .gitignore and wipe it between runs.
+
+- id: yarn-install
+  name: Install Yarn dependencies
+  entry: yarn install
+  language: system
+  files: \.tool-versions|package\.json|yarn(-.*\.cjs|\.lock)
+  pass_filenames: false
+  description: >
+    Install all Yarn dependencies, and update yarn.lock. See
+    https://yarnpkg.com/cli/install for more details.
+
+- id: yarn-dedupe
+  name: Deduplicate Yarn dependencies
+  entry: yarn dedupe
+  language: system
+  files: \.tool-versions|package\.json|yarn(-*\.cjs|\.lock)
+  pass_filenames: false
+  description: >
+    Remove all but the highest version of any duplicates. More than one version
+    of a package may be required in the case of non-overlapping version
+    specifications. See https://yarnpkg.com/cli/dedupe for more details.
+
+- id: yarn-audit
+  name: Preform security audit of Yarn dependencies
+  entry: yarn npm audit
+  language: system
+  pass_filenames: false
+  description: >
+    Check Yarn dependencies for known vulnerabilities. See
+    https://yarnpkg.com/cli/npm/audit for more details.
+  args: [--all, --recursive]
+
+- id: yarn-audit-licenses
+  name: Audit licenses of Yarn dependencies
+  entry: yarn licenses audit
+  language: system
+  files: \.tool-versions|package\.json|yarn(-*\.cjs|\.lock)|plugin-licenses-audit\.cjs
+  pass_filenames: false
+  description: >
+    Check Yarn dependencies for license compatibility. See
+    https://github.com/tophat/yarn-plugin-licenses for more details.
+  args:
+    - --output-file=reports/junit/licenses.xml
+    - --config=.licenses.config.ts
+    - --loose
+
+- id: yarn-build
+  name: Build the app
+  entry: yarn run build
+  language: system
+  files: \.tool-versions|package\.json|yarn(-*\.cjs|\.lock)|.*\.ts
+  pass_filenames: false
+  description: >
+    Compile TypeScript files to JavaScript. See https://yarnpkg.com/cli/run for
+    more details.
+
+- id: yarn-test
+  name: Run Yarn tests
+  entry: yarn run test
+  language: system
+  types:
+    - ts
+  args: [--findRelatedTests]
+  description: >
+    Run the Jest tests that check the modified files. See
+    https://yarnpkg.com/cli/run and
+    https://jestjs.io/docs/cli#--findrelatedtests-spaceseparatedlistofsourcefiles
+    for more details.
