@@ -104,12 +104,10 @@
     - commit
   description: >
     See https://megalinter.github.io/latest/mega-linter-runner/#usage and
-    https://megalinter.github.io/latest/configuration/ if you wish to override
-    the default arguments. mega-linter-runner is specified as an argument so
-    that you may override the version (e.g., mega-linter-runner@vx.y.z). Depends
-    on npx, which ships with npm 7+, and Docker. Unlike most pre-commit hooks,
-    MegaLinter computes the files to run on itself. If you encounter permission
-    errors, try running Docker in rootless mode:
+    https://megalinter.github.io/latest/configuration/ for available arguments.
+    Depends on npx, which ships with npm 7+, and Docker. Unlike most pre-commit
+    hooks, MegaLinter computes the files to run on itself. If you encounter
+    permission errors, try running Docker in rootless mode:
     https://github.com/marketplace/actions/rootless-docker/. Runs very slowly
     when the pertinent Docker image isn't already cached. Linter results are
     logged to the report directory, so you should make sure to list it in your
@@ -129,11 +127,9 @@
     - push
   description: >
     See https://megalinter.github.io/latest/mega-linter-runner/#usage and
-    https://megalinter.github.io/latest/configuration/ if you wish to override
-    the default arguments. mega-linter-runner is specified as an argument so
-    that you may override the version (e.g., mega-linter-runner@vx.y.z). Depends
-    on npx, which ships with npm 7+, and Docker. If you encounter permission
-    errors, try running Docker in rootless mode:
+    https://megalinter.github.io/latest/configuration/ for available arguments.
+    Depends on npx, which ships with npm 7+, and Docker. If you encounter
+    permission errors, try running Docker in rootless mode:
     https://github.com/marketplace/actions/rootless-docker/. Runs very slowly
     when the pertinent Docker image isn't already cached. Linter results are
     logged to the report directory, so you should make sure to list it in your
