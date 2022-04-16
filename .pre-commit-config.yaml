@@ -18,9 +18,9 @@ repos:
       - id: poetry-install
       - id: pre-commit-install
       - id: megalinter
-        args: [--flavor, documentation, --release, v5.11.0]
+        args: &megalinter-args [--flavor, documentation, --release, v5.11.0]
       - id: megalinter-all
-        args: [--flavor, documentation, --release, v5.11.0]
+        args: *megalinter-args
 
   ## Markdown
   - repo: https://github.com/frnmst/md-toc
