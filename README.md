@@ -72,20 +72,10 @@ Install Poetry dependencies from `poetry.lock` by running
 
 ### `pre-commit-install`
 
-Install pre-commit hooks by running:
-
-```sh
-pre-commit install \
-  --hook-type commit-msg \
-  --hook-type post-checkout \
-  --hook-type pre-commit \
-  --hook-type pre-merge-commit \
-  --hook-type pre-push \
-  --install-hooks
-```
-
-See the documentation for
-[`pre-commit install`](https://pre-commit.com/#pre-commit-install).
+Install pre-commit hooks by running
+[`pre-commit install --install-hooks`](https://pre-commit.com/#pre-commit-install).
+See also the documentation for
+[`default_install_hook_types`](https://pre-commit.com/#top_level-default_install_hook_types).
 
 ### `megalinter`
 
