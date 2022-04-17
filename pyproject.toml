@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool]
   [tool.commitizen]
-  version = "0.2.0"
+  version = "0.3.0"
   version_files = [
     ".pre-commit-config.yaml:rev.\\s+(?=[^\\n]+Commitizen)",
     "pyproject.toml:version"
@@ -12,7 +12,7 @@ build-backend = "poetry.core.masonry.api"
 
   [tool.poetry]
   name = "pre-commit-hooks"
-  version = "0.2.0"
+  version = "0.3.0"
   description = "Hooks for Use With the pre-commit Framework"
   authors = ["Kurt von Laven <kurt.von.laven@gmail.com>"]
   license = "MIT"
