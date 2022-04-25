@@ -96,10 +96,11 @@
     See https://megalinter.github.io/latest/mega-linter-runner/#usage and
     https://megalinter.github.io/latest/configuration/ for available arguments.
     Depends on npx, which ships with npm 7+, and Docker. Unlike most pre-commit
-    hooks, MegaLinter computes the files to run on itself. If you encounter
+    hooks, MegaLinter itself computes the files to run on. Runs very slowly when
+    the pertinent Docker image isn't already cached (c.f.,
+    https://github.com/marketplace/actions/docker-cache/). If you encounter
     permission errors, try running Docker in rootless mode:
-    https://github.com/marketplace/actions/rootless-docker/. Runs very slowly
-    when the pertinent Docker image isn't already cached. Linter results are
+    https://github.com/marketplace/actions/rootless-docker/. Linter results are
     logged to the report directory, so you should make sure to list it in your
     .gitignore and wipe it between runs. Skip jscpd since duplicate detection
     fundamentally requires scanning the entire repository and hence can't be
@@ -118,10 +119,11 @@
   description: >
     See https://megalinter.github.io/latest/mega-linter-runner/#usage and
     https://megalinter.github.io/latest/configuration/ for available arguments.
-    Depends on npx, which ships with npm 7+, and Docker. If you encounter
+    Depends on npx, which ships with npm 7+, and Docker. Runs very slowly when the
+    pertinent Docker image isn't already cached (c.f.,
+    https://github.com/marketplace/actions/docker-cache/). If you encounter
     permission errors, try running Docker in rootless mode:
-    https://github.com/marketplace/actions/rootless-docker/. Runs very slowly
-    when the pertinent Docker image isn't already cached. Linter results are
+    https://github.com/marketplace/actions/rootless-docker/. Linter results are
     logged to the report directory, so you should make sure to list it in your
     .gitignore and wipe it between runs.
 
