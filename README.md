@@ -42,7 +42,7 @@ Node.js are managed by asdf, but the file patterns may be overridden.
 ### `no-merge-commits`
 
 Prevent new merge commits. Useful for enforcing
-[rebase workflows](https://www.atlassian.com/git/tutorials/merging-vs-rebasing).
+[rebase workflows](https://git-scm.com/book/en/v2/Git-Branching-Rebasing).
 Does not stop merge committing in CI.
 
 ### `asdf-install`
