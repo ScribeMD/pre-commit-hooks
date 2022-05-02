@@ -32,10 +32,12 @@ Hooks for Use With the [pre-commit](https://pre-commit.com) Framework
 <!--TOC-->
 
 Pre-commit only supports [Git](https://git-scm.com/) and no other version
-control system (VCS). The defaults for the Yarn hooks are configured for use
-with a [Zero-Installs](https://yarnpkg.com/features/zero-installs)
+control system (VCS). The defaults for the [Yarn](https://yarnpkg.com/) hooks
+are configured for use with a
+[Zero-Installs](https://yarnpkg.com/features/zero-installs)
 [TypeScript](https://www.typescriptlang.org/) project. They assume Yarn and
-Node.js are managed by asdf, but the file patterns may be overridden.
+[Node.js](https://nodejs.org/) are managed by [asdf](https://asdf-vm.com/), but
+the file patterns may be overridden.
 
 ## Hooks
 
@@ -54,8 +56,8 @@ Install tools (based on `.tool-versions` unless otherwise configured) by running
 
 Validate structure of `pyproject.toml` by running
 [`poetry check`](https://python-poetry.org/docs/cli/#check). Run when
-Poetry dependencies or version changes (assuming Poetry is managed by asdf, but
-the file pattern may be overridden).
+[Poetry](https://python-poetry.org/) dependencies or version changes (assuming
+Poetry is managed by asdf, but the file pattern may be overridden).
 
 ### `poetry-lock`
 
@@ -79,8 +81,8 @@ See also the documentation for
 
 ### `megalinter`
 
-Run MegaLinter on files modified relative to default branch (skipping jscpd)
-by running:
+Run [MegaLinter](https://megalinter.github.io/) on files modified relative to
+default branch (skipping jscpd) by running:
 
 ```sh
 npx -- mega-linter-runner@<version> \
