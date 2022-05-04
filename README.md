@@ -26,7 +26,6 @@ Hooks for Use With the [pre-commit](https://pre-commit.com) Framework
     - [`yarn-audit-licenses`](#yarn-audit-licenses)
     - [`yarn-build`](#yarn-build)
     - [`yarn-test`](#yarn-test)
-  - [Contributing](#contributing)
   - [Changelog](#changelog)
 
 <!--TOC-->
@@ -153,10 +152,6 @@ Run the `"test"` script in `package.json` via
 running
 [Jest tests that check the modified files](https://jestjs.io/docs/cli#--findrelatedtests-spaceseparatedlistofsourcefiles),
 but the flag can be overridden.
-
-## Contributing
-
-Please refer to [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Changelog
 
