@@ -94,7 +94,7 @@ npx -- mega-linter-runner@<version> \
 See the documentation for
 [`mega-linter-runner`](https://megalinter.github.io/latest/mega-linter-runner/#usage)
 and
-[`MegaLinter configuration`](https://megalinter.github.io/latest/configuration/).
+[MegaLinter configuration](https://megalinter.github.io/latest/configuration/).
 
 ### `megalinter-all`
 
@@ -109,7 +109,7 @@ npx -- mega-linter-runner@<version> \
 See the documentation for
 [`mega-linter-runner`](https://megalinter.github.io/latest/mega-linter-runner/#usage)
 and
-[`MegaLinter configuration`](https://megalinter.github.io/latest/configuration/).
+[MegaLinter configuration](https://megalinter.github.io/latest/configuration/).
 
 ### `yarn-install`
 
@@ -155,4 +155,4 @@ but the flag can be overridden.
 
 ## Changelog
 
-Please refer to [CHANGELOG.md](CHANGELOG.md).
+Please refer to [`CHANGELOG.md`](CHANGELOG.md).
