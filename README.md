@@ -122,7 +122,7 @@ Deduplicate Yarn dependencies by running
 
 ### `yarn-audit`
 
-Preform security audit of Yarn dependencies by running
+Perform security audit of Yarn dependencies by running
 [`yarn npm audit --all --recursive`](https://yarnpkg.com/cli/npm/audit).
 
 ### `yarn-audit-licenses`

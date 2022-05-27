@@ -2,6 +2,7 @@ version: "0.2"
 language: en-US
 useGitignore: true
 ignorePaths:
+  - .dictionary.txt
   - .vscode
 dictionaryDefinitions:
   - name: custom
