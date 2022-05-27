@@ -149,7 +149,7 @@
     specifications. See https://yarnpkg.com/cli/dedupe for more details.
 
 - id: yarn-audit
-  name: Preform security audit of Yarn dependencies
+  name: Perform security audit of Yarn dependencies
   entry: yarn npm audit
   language: system
   pass_filenames: false
