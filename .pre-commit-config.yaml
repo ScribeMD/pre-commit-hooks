@@ -1,6 +1,7 @@
 default_install_hook_types:
   - commit-msg
   - post-checkout
+  - post-rewrite
   - pre-commit
   - pre-merge-commit
   - pre-push

@@ -20,6 +20,7 @@
     - commit
     - push
     - post-checkout
+    - post-rewrite
   description: >
     Install or set versions of asdf-managed tools based on .tool-versions unless
     otherwise configured. See
@@ -58,6 +59,7 @@
     - commit
     - push
     - post-checkout
+    - post-rewrite
   description: >
     Install all Poetry dependencies from poetry.lock. See
     https://python-poetry.org/docs/cli/#install for more details.
@@ -72,6 +74,7 @@
     - commit
     - push
     - post-checkout
+    - post-rewrite
   description: >
     Install default hook types and environments for all available hooks. Ensure
     that updates to pre-commit's git hook script are applied. See
