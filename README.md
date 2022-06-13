@@ -147,8 +147,8 @@ Run the `"build"` script in `package.json` via
 ### `yarn-test`
 
 Run the `"test"` script in `package.json` via
-[`yarn run test --findRelatedTests`](https://yarnpkg.com/cli/run). Useful for
-running
+[`yarn run test --passWithNoTests --findRelatedTests`](https://yarnpkg.com/cli/run).
+Useful for running
 [Jest tests that check the modified files](https://jestjs.io/docs/cli#--findrelatedtests-spaceseparatedlistofsourcefiles),
 but the flag can be overridden.
 
