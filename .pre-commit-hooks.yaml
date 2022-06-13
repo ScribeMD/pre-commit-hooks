@@ -191,7 +191,7 @@
   language: system
   types:
     - ts
-  args: [--findRelatedTests]
+  args: [--passWithNoTests, --findRelatedTests]
   description: >
     Run the Jest tests that check the modified files. See
     https://yarnpkg.com/cli/run and
