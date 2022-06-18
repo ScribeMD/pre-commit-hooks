@@ -191,6 +191,7 @@
   language: system
   types:
     - ts
+  require_serial: true
   args: [--passWithNoTests, --findRelatedTests]
   description: >
     Run the Jest tests that check the modified files. See
