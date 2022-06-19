@@ -192,9 +192,9 @@
   types:
     - ts
   require_serial: true
-  args: [--passWithNoTests, --findRelatedTests]
   description: >
     Run the Jest tests that check the modified files. See
     https://yarnpkg.com/cli/run and
     https://jestjs.io/docs/cli#--findrelatedtests-spaceseparatedlistofsourcefiles
     for more details.
+  args: [--passWithNoTests, --findRelatedTests]
