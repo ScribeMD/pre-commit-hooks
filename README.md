@@ -1,9 +1,9 @@
 # pre-commit-hooks
 
-[![Test](https://github.com/ScribeMD/pre-commit-hooks/workflows/Test/badge.svg)](https://github.com/ScribeMD/pre-commit-hooks/actions/workflows/test.yaml)
-[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat-square)](https://conventionalcommits.org)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![Test Workflow Status](https://github.com/ScribeMD/pre-commit-hooks/workflows/Test/badge.svg)](https://github.com/ScribeMD/pre-commit-hooks/actions/workflows/test.yaml)
+[![Git Hooks: pre-commit](https://img.shields.io/badge/pre--commit-Git_Hooks-orange?logo=precommit&logoColor=FAB040)](https://github.com/pre-commit/pre-commit)
+[![Commit Style: Conventional Commits](https://img.shields.io/badge/Conventional_Commits-Commit_Style-yellow?logo=conventionalcommits&logoColor=FE5196)](https://conventionalcommits.org)
+[![Code Style: Prettier](https://img.shields.io/badge/Prettier-Code_Style-FF69B4?logo=prettier&logoColor=F7B93E)](https://github.com/prettier/prettier)
 
 Hooks for Use With the [pre-commit](https://pre-commit.com) Framework
 
