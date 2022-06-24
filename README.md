@@ -133,7 +133,6 @@ Audit licenses of Yarn dependencies by running:
 yarn licenses audit \
   --output-file=reports/junit/licenses.xml
   --config=.licenses.config.ts
-  --loose
 ```
 
 See [the GitHub repo](https://github.com/tophat/yarn-plugin-licenses) for the

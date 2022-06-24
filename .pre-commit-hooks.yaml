@@ -165,15 +165,12 @@
   name: Audit licenses of Yarn dependencies
   entry: yarn licenses audit
   language: system
-  files: \.tool-versions|package\.json|yarn(-*\.cjs|\.lock)|plugin-licenses-audit\.cjs
+  files: \.tool-versions|package\.json|yarn(-*\.cjs|\.lock)|plugin-licenses-audit\.cjs|\.licenses\.config\.ts
   pass_filenames: false
   description: >
     Check Yarn dependencies for license compatibility. See
     https://github.com/tophat/yarn-plugin-licenses for more details.
-  args:
-    - --output-file=reports/junit/licenses.xml
-    - --config=.licenses.config.ts
-    - --loose
+  args: [--output-file=reports/junit/licenses.xml, --config=.licenses.config.ts]
 
 - id: yarn-build
   name: Build the app
