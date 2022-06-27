@@ -86,7 +86,7 @@
 - id: megalinter
   name: Run MegaLinter on files modified relative to default branch (skipping jscpd)
   entry: >
-    npx -- mega-linter-runner@v5.15.0
+    npx -- mega-linter-runner@v5.16.0
     --fix
     --env LOG_LEVEL=warning
     --env VALIDATE_ALL_CODEBASE=false
@@ -112,7 +112,7 @@
 - id: megalinter-all
   name: Run MegaLinter on all files
   entry: >
-    npx -- mega-linter-runner@v5.15.0
+    npx -- mega-linter-runner@v5.16.0
     --fix
     --env LOG_LEVEL=warning
   language: system
