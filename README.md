@@ -87,8 +87,8 @@ See also the documentation for
 
 ### `megalinter`
 
-Run [MegaLinter](https://megalinter.github.io/) on files modified relative to
-default branch (skipping jscpd) by running:
+Run [MegaLinter](https://oxsecurity.github.io/megalinter/) on files modified
+relative to default branch (skipping jscpd) by running:
 
 ```sh
 npx -- mega-linter-runner@<version> \
@@ -99,9 +99,9 @@ npx -- mega-linter-runner@<version> \
 ```
 
 See the documentation for
-[`mega-linter-runner`](https://megalinter.github.io/latest/mega-linter-runner/#usage)
+[`mega-linter-runner`](https://oxsecurity.github.io/megalinter/latest/mega-linter-runner/#usage)
 and
-[MegaLinter configuration](https://megalinter.github.io/latest/configuration/).
+[MegaLinter configuration](https://oxsecurity.github.io/megalinter/latest/configuration/).
 
 ### `megalinter-all`
 
@@ -114,9 +114,9 @@ npx -- mega-linter-runner@<version> \
 ```
 
 See the documentation for
-[`mega-linter-runner`](https://megalinter.github.io/latest/mega-linter-runner/#usage)
+[`mega-linter-runner`](https://oxsecurity.github.io/megalinter/latest/mega-linter-runner/#usage)
 and
-[MegaLinter configuration](https://megalinter.github.io/latest/configuration/).
+[MegaLinter configuration](https://oxsecurity.github.io/megalinter/latest/configuration/).
 
 ### `yarn-install`
 
