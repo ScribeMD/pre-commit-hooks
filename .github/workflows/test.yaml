@@ -9,7 +9,7 @@ on:
 jobs:
   test:
     name: Run Pre-commit Hooks
-    uses: ScribeMD/pre-commit-action/.github/workflows/test.yaml@0.8.14
+    uses: ScribeMD/pre-commit-action/.github/workflows/test.yaml@0.8.15
     permissions:
       contents: write
       pull-requests: read
