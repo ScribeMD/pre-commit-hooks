@@ -96,8 +96,8 @@
   stages:
     - commit
   description: >
-    See https://megalinter.github.io/latest/mega-linter-runner/#usage and
-    https://megalinter.github.io/latest/configuration/ for available arguments.
+    See https://oxsecurity.github.io/megalinter/latest/mega-linter-runner/#usage and
+    https://oxsecurity.github.io/megalinter/latest/configuration/ for available arguments.
     Depends on npx, which ships with npm 7+, and Docker. Unlike most pre-commit
     hooks, MegaLinter itself computes the files to run on. Runs very slowly when
     the pertinent Docker image isn't already cached (c.f.,
@@ -120,8 +120,8 @@
   stages:
     - push
   description: >
-    See https://megalinter.github.io/latest/mega-linter-runner/#usage and
-    https://megalinter.github.io/latest/configuration/ for available arguments.
+    See https://oxsecurity.github.io/megalinter/latest/mega-linter-runner/#usage and
+    https://oxsecurity.github.io/megalinter/latest/configuration/ for available arguments.
     Depends on npx, which ships with npm 7+, and Docker. Runs very slowly when the
     pertinent Docker image isn't already cached (c.f.,
     https://github.com/marketplace/actions/docker-cache/). If you encounter
