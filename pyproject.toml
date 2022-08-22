@@ -6,7 +6,7 @@ build-backend = "poetry.core.masonry.api"
   [tool.commitizen]
   version = "0.8.0"
   version_files = [
-    ".pre-commit-config.yaml:rev.\\s+(?=[^\\n]+Commitizen)",
+    ".pre-commit-config.yaml:rev:\\s+(?=[^\\n]+Commitizen)",
     "pyproject.toml:version"
   ]
 
@@ -23,5 +23,5 @@ build-backend = "poetry.core.masonry.api"
 
   [tool.poetry.dev-dependencies]
   # Keep in sync with .pre-commit-config.yaml.
-  commitizen = "^2.31.0"
+  commitizen = "^2.32.2"
   pre-commit = "^2.20.0"
