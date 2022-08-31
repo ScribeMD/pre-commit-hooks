@@ -26,7 +26,9 @@ Hooks for Use With the [pre-commit](https://pre-commit.com) Framework
     - [`poetry-install`](#poetry-install)
     - [`pre-commit-install`](#pre-commit-install)
     - [`megalinter`](#megalinter)
+    - [`megalinter-incremental`](#megalinter-incremental)
     - [`megalinter-all`](#megalinter-all)
+    - [`megalinter-full`](#megalinter-full)
     - [`yarn-install`](#yarn-install)
     - [`yarn-dedupe`](#yarn-dedupe)
     - [`yarn-audit`](#yarn-audit)
@@ -88,6 +90,7 @@ See also the documentation for
 
 ### `megalinter`
 
+This hook is intended for MegaLinter v5.
 Run [MegaLinter](https://oxsecurity.github.io/megalinter/) on files modified
 relative to default branch (skipping jscpd) by running:
 
@@ -104,14 +107,52 @@ See the documentation for
 and
 [MegaLinter configuration](https://oxsecurity.github.io/megalinter/latest/configuration/).
 
+### `megalinter-incremental`
+
+This hook is intended for MegaLinter v6. Run MegaLinter (skipping linters that
+run in project mode) by running:
+
+```sh
+npx -- mega-linter-runner@<version> \
+  --containername megalinter-$(basename "$PWD") \
+  --remove-container \
+  --fix \
+  --env CLEAR_REPORT_FOLDER=true \
+  --env LOG_LEVEL=warning \
+  --filesonly
+```
+
+See the documentation for
+[`mega-linter-runner`](https://oxsecurity.github.io/megalinter/latest/mega-linter-runner/#usage)
+and
+[MegaLinter configuration](https://oxsecurity.github.io/megalinter/latest/configuration/).
+
 ### `megalinter-all`
 
-Run MegaLinter on all files by running:
+This hook is intended for MegaLinter v5. Run MegaLinter on all files by running:
 
 ```sh
 npx -- mega-linter-runner@<version> \
   --fix \
   --env LOG_LEVEL=warning
+```
+
+See the documentation for
+[`mega-linter-runner`](https://oxsecurity.github.io/megalinter/latest/mega-linter-runner/#usage)
+and
+[MegaLinter configuration](https://oxsecurity.github.io/megalinter/latest/configuration/).
+
+### `megalinter-full`
+
+This hook is intended for MegaLinter v6. Run MegaLinter by running:
+
+```sh
+npx -- mega-linter-runner@<version> \
+  --containername "megalinter-all-$(basename "$PWD")" \
+  --remove-container \
+  --fix \
+  --env CLEAR_REPORT_FOLDER=true \
+  --env LOG_LEVEL=warning \
 ```
 
 See the documentation for
