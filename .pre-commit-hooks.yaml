@@ -61,8 +61,10 @@
     - post-checkout
     - post-rewrite
   description: >
-    Install all Poetry dependencies from poetry.lock. See
+    Install all Poetry dependencies from poetry.lock. Uninstall any dependencies
+    not found in the lock file. Requires Poetry 1.2+. See
     https://python-poetry.org/docs/cli/#install for more details.
+  args: [--sync]
 
 - id: pre-commit-install
   name: Install pre-commit hooks
