@@ -76,7 +76,8 @@ but the file pattern may be overridden).
 ### `poetry-install`
 
 Install Poetry dependencies from `poetry.lock` by running
-[`poetry install`](https://python-poetry.org/docs/cli/#install).
+[`poetry install --sync`](https://python-poetry.org/docs/cli/#install).
+Uninstall any dependencies not found in the lock file. Requires Poetry 1.2+.
 
 ### `pre-commit-install`
 
