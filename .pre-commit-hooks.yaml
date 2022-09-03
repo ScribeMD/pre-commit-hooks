@@ -124,6 +124,7 @@
   language: system
   stages:
     - commit
+  require_serial: true
   description: >
     See https://oxsecurity.github.io/megalinter/latest/mega-linter-runner/#usage
     and https://oxsecurity.github.io/megalinter/latest/configuration/ if you
@@ -170,6 +171,7 @@
   language: system
   stages:
     - push
+  require_serial: true
   description: >
     See https://oxsecurity.github.io/megalinter/latest/mega-linter-runner/#usage
     and https://oxsecurity.github.io/megalinter/latest/configuration/ if you
