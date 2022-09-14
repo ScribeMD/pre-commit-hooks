@@ -114,7 +114,7 @@
 - id: megalinter-incremental
   name: Run MegaLinter (skipping linters that run in project mode)
   entry: >
-    npx -- mega-linter-runner@v6.7.1
+    npx -- mega-linter-runner@v6.9.1
     --containername megalinter-$(basename "$PWD")
     --remove-container
     --fix
@@ -162,7 +162,7 @@
 - id: megalinter-full
   name: Run MegaLinter
   entry: >
-    npx -- mega-linter-runner@v6.7.1
+    npx -- mega-linter-runner@v6.9.1
     --containername "megalinter-all-$(basename "$PWD")"
     --remove-container
     --fix
