@@ -2,3 +2,4 @@
 containername
 filesonly
 Laven
+setuptools
