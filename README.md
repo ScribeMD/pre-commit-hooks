@@ -25,9 +25,7 @@ Hooks for Use With the [pre-commit](https://pre-commit.com) Framework
     - [`poetry-lock`](#poetry-lock)
     - [`poetry-install`](#poetry-install)
     - [`pre-commit-install`](#pre-commit-install)
-    - [`megalinter`](#megalinter)
     - [`megalinter-incremental`](#megalinter-incremental)
-    - [`megalinter-all`](#megalinter-all)
     - [`megalinter-full`](#megalinter-full)
     - [`yarn-install`](#yarn-install)
     - [`yarn-dedupe`](#yarn-dedupe)
@@ -88,29 +86,10 @@ Install pre-commit hooks by running
 See also the documentation for
 [`default_install_hook_types`](https://pre-commit.com/#top_level-default_install_hook_types).
 
-### `megalinter`
-
-This hook is intended for MegaLinter v5.
-Run [MegaLinter](https://oxsecurity.github.io/megalinter/) on files modified
-relative to default branch (skipping jscpd) by running:
-
-```sh
-npx -- mega-linter-runner@<version> \
-  --fix \
-  --env LOG_LEVEL=warning \
-  --env VALIDATE_ALL_CODEBASE=false \
-  --env DISABLE_LINTERS=COPYPASTE_JSCPD
-```
-
-See the documentation for
-[`mega-linter-runner`](https://oxsecurity.github.io/megalinter/latest/mega-linter-runner/#usage)
-and
-[MegaLinter configuration](https://oxsecurity.github.io/megalinter/latest/configuration/).
-
 ### `megalinter-incremental`
 
-This hook is intended for MegaLinter v6. Run MegaLinter (skipping linters that
-run in project mode) by running:
+This hook is intended for MegaLinter v6. Run [MegaLinter](https://oxsecurity.github.io/megalinter/)
+(skipping linters that run in project mode) by running:
 
 ```sh
 npx -- mega-linter-runner@<version> \
@@ -120,21 +99,6 @@ npx -- mega-linter-runner@<version> \
   --env CLEAR_REPORT_FOLDER=true \
   --env LOG_LEVEL=warning \
   --filesonly
-```
-
-See the documentation for
-[`mega-linter-runner`](https://oxsecurity.github.io/megalinter/latest/mega-linter-runner/#usage)
-and
-[MegaLinter configuration](https://oxsecurity.github.io/megalinter/latest/configuration/).
-
-### `megalinter-all`
-
-This hook is intended for MegaLinter v5. Run MegaLinter on all files by running:
-
-```sh
-npx -- mega-linter-runner@<version> \
-  --fix \
-  --env LOG_LEVEL=warning
 ```
 
 See the documentation for
