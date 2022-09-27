@@ -1,5 +1,4 @@
 !preform
-containername
 filesonly
 Laven
 setuptools
