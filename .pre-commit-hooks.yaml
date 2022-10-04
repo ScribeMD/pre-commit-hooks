@@ -141,8 +141,13 @@
   name: Install Yarn dependencies
   entry: yarn install
   language: system
-  files: \.tool-versions|package\.json|yarn(-.*\.cjs|\.lock)
+  always_run: true
   pass_filenames: false
+  stages:
+    - commit
+    - push
+    - post-checkout
+    - post-rewrite
   description: >
     Install all Yarn dependencies, and update yarn.lock. See
     https://yarnpkg.com/cli/install for more details.
