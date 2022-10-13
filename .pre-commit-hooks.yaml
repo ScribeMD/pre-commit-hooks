@@ -7,8 +7,7 @@
   description: >
     For projects that use rebase rather than merge workflows, this hook makes it
     easy to enforce that policy. See
-    https://www.atlassian.com/git/tutorials/merging-vs-rebasing for more
-    details.
+    https://git-scm.com/book/en/v2/Git-Branching-Rebasing for more details.
 
 - id: asdf-install
   name: Install correct versions of tools managed by asdf
