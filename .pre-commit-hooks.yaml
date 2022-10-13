@@ -78,7 +78,7 @@
     - post-rewrite
   description: >
     Install default hook types and environments for all available hooks. Ensure
-    that updates to pre-commit's git hook script are applied. See
+    that updates to pre-commit's Git hook script are applied. See
     https://pre-commit.com/#pre-commit-install and
     https://pre-commit.com/#top_level-default_install_hook_types for more
     details.
