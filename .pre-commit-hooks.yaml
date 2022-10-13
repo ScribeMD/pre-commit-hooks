@@ -44,7 +44,7 @@
   pass_filenames: false
   description: >
     Update poetry.lock to match pyproject.toml without upgrading already locked
-    dependencies. See https://python-poetry.org/docs/cli/#options-9 for more
+    dependencies. See https://python-poetry.org/docs/cli/#lock for more
     details.
   args: [--no-update]
 
