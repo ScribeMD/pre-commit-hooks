@@ -6,7 +6,7 @@ build-backend = "poetry.core.masonry.api"
   [tool.commitizen]
   version = "0.13.1"
   version_files = [
-    ".pre-commit-config.yaml:rev:\\s+(?=[^\\n]+Commitizen)",
+    ".pre-commit-config.yaml:rev:.+Commitizen",
     "pyproject.toml:version"
   ]
 
