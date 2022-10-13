@@ -69,9 +69,9 @@ Poetry is managed by asdf, but the file pattern may be overridden).
 
 Update `poetry.lock` to match `pyproject.toml` without upgrading already locked
 dependencies by running
-[`poetry lock --no-update`](https://python-poetry.org/docs/cli/#options-9). Run
-when Poetry dependencies or version changes (assuming Poetry is managed by asdf,
-but the file pattern may be overridden).
+[`poetry lock --no-update`](https://python-poetry.org/docs/cli/#lock). Run when
+Poetry dependencies or version changes (assuming Poetry is managed by asdf, but
+the file pattern may be overridden).
 
 ### `poetry-install`
 
