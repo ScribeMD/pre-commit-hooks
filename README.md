@@ -93,7 +93,7 @@ This hook is intended for MegaLinter v6. Run [MegaLinter](https://oxsecurity.git
 
 ```sh
 npx -- mega-linter-runner@<version> \
-  --containername megalinter-incremental \
+  --container-name megalinter-incremental \
   --remove-container \
   --fix \
   --env CLEAR_REPORT_FOLDER=true \
@@ -112,7 +112,7 @@ This hook is intended for MegaLinter v6. Run MegaLinter by running:
 
 ```sh
 npx -- mega-linter-runner@<version> \
-  --containername megalinter-full \
+  --container-name megalinter-full \
   --remove-container \
   --fix \
   --env CLEAR_REPORT_FOLDER=true \

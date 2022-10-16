@@ -87,8 +87,8 @@
 - id: megalinter-incremental
   name: Run MegaLinter (skipping linters that run in project mode)
   entry: >
-    npx -- mega-linter-runner@v6.10.0
-    --containername megalinter-incremental
+    npx -- mega-linter-runner@v6.12.0
+    --container-name megalinter-incremental
     --remove-container
     --fix
     --env CLEAR_REPORT_FOLDER=true
@@ -114,8 +114,8 @@
 - id: megalinter-full
   name: Run MegaLinter
   entry: >
-    npx -- mega-linter-runner@v6.10.0
-    --containername megalinter-full
+    npx -- mega-linter-runner@v6.12.0
+    --container-name megalinter-full
     --remove-container
     --fix
     --env CLEAR_REPORT_FOLDER=true
