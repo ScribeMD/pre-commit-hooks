@@ -96,7 +96,6 @@ npx -- mega-linter-runner@<version> \
   --container-name megalinter-incremental \
   --remove-container \
   --fix \
-  --env CLEAR_REPORT_FOLDER=true \
   --env LOG_LEVEL=warning \
   --filesonly
 ```
@@ -115,7 +114,6 @@ npx -- mega-linter-runner@<version> \
   --container-name megalinter-full \
   --remove-container \
   --fix \
-  --env CLEAR_REPORT_FOLDER=true \
   --env LOG_LEVEL=warning \
 ```
 

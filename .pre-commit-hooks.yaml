@@ -91,7 +91,6 @@
     --container-name megalinter-incremental
     --remove-container
     --fix
-    --env CLEAR_REPORT_FOLDER=true
     --env LOG_LEVEL=warning
     --filesonly
   language: system
@@ -118,7 +117,6 @@
     --container-name megalinter-full
     --remove-container
     --fix
-    --env CLEAR_REPORT_FOLDER=true
     --env LOG_LEVEL=warning
   language: system
   stages:
