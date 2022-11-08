@@ -9,6 +9,7 @@ build-backend = "poetry.core.masonry.api"
     ".pre-commit-config.yaml:rev:.+Commitizen",
     "pyproject.toml:version"
   ]
+  major_version_zero = true
 
   [tool.poetry]
   name = "pre-commit-hooks"
