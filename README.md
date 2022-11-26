@@ -92,7 +92,7 @@ This hook is intended for MegaLinter v6. Run [MegaLinter](https://oxsecurity.git
 (skipping linters that run in project mode) by running:
 
 ```sh
-npx -- mega-linter-runner@v6.13.0 \
+npx -- mega-linter-runner@v6.15.0 \
   --container-name megalinter-incremental \
   --remove-container \
   --fix \
@@ -110,7 +110,7 @@ and
 This hook is intended for MegaLinter v6. Run MegaLinter by running:
 
 ```sh
-npx -- mega-linter-runner@v6.13.0 \
+npx -- mega-linter-runner@v6.15.0 \
   --container-name megalinter-full \
   --remove-container \
   --fix \
