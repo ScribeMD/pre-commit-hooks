@@ -88,7 +88,7 @@ See also the documentation for
 
 ### `megalinter-incremental`
 
-This hook is intended for MegaLinter v6. Run [MegaLinter](https://oxsecurity.github.io/megalinter/)
+This hook is intended for MegaLinter v6. Run [MegaLinter](https://megalinter.io/)
 (skipping linters that run in project mode) by running:
 
 ```sh
@@ -101,9 +101,9 @@ npx -- mega-linter-runner@v6.19.0 \
 ```
 
 See the documentation for
-[`mega-linter-runner`](https://oxsecurity.github.io/megalinter/latest/mega-linter-runner/#usage)
+[`mega-linter-runner`](https://megalinter.io/latest/mega-linter-runner/#usage)
 and
-[MegaLinter configuration](https://oxsecurity.github.io/megalinter/latest/configuration/).
+[MegaLinter configuration](https://megalinter.io/latest/configuration/).
 
 ### `megalinter-full`
 
@@ -118,9 +118,9 @@ npx -- mega-linter-runner@v6.19.0 \
 ```
 
 See the documentation for
-[`mega-linter-runner`](https://oxsecurity.github.io/megalinter/latest/mega-linter-runner/#usage)
+[`mega-linter-runner`](https://megalinter.io/latest/mega-linter-runner/#usage)
 and
-[MegaLinter configuration](https://oxsecurity.github.io/megalinter/latest/configuration/).
+[MegaLinter configuration](https://megalinter.io/latest/configuration/).
 
 ### `yarn-install`
 
