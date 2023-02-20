@@ -30,7 +30,6 @@ Hooks for Use With the [pre-commit](https://pre-commit.com) Framework
     - [`yarn-install`](#yarn-install)
     - [`yarn-dedupe`](#yarn-dedupe)
     - [`yarn-audit`](#yarn-audit)
-    - [`yarn-audit-licenses`](#yarn-audit-licenses)
     - [`yarn-build`](#yarn-build)
     - [`yarn-test`](#yarn-test)
   - [Changelog](#changelog)
@@ -136,19 +135,6 @@ Deduplicate Yarn dependencies by running
 
 Perform security audit of Yarn dependencies by running
 [`yarn npm audit --all --recursive`](https://yarnpkg.com/cli/npm/audit).
-
-### `yarn-audit-licenses`
-
-Audit licenses of Yarn dependencies by running:
-
-```sh
-yarn licenses audit \
-  --output-file=reports/junit/licenses.xml
-  --config=.licenses.config.ts
-```
-
-See [the GitHub repo](https://github.com/tophat/yarn-plugin-licenses) for the
-Yarn licenses plugin.
 
 ### `yarn-build`
 
