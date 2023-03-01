@@ -73,7 +73,7 @@ repos:
     hooks:
       - id: check-useless-excludes
   - repo: https://github.com/pre-commit/pre-commit
-    rev: v3.0.4 # Keep in sync with pyproject.toml.
+    rev: v3.1.1 # Keep in sync with pyproject.toml.
     hooks:
       - id: validate_manifest
 
