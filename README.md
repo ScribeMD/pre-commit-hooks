@@ -87,8 +87,9 @@ See also the documentation for
 
 ### `megalinter-incremental`
 
-This hook is intended for MegaLinter v6. Run [MegaLinter](https://megalinter.io/)
-(skipping linters that run in project mode) by running:
+This hook is intended for MegaLinter v6. Run
+[MegaLinter](https://megalinter.io/) (skipping linters that run in project mode)
+by running:
 
 ```sh
 npx -- mega-linter-runner@v6.20.1 \
