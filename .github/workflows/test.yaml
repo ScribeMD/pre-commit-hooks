@@ -12,7 +12,7 @@ permissions:
 jobs:
   test:
     name: Run Pre-commit Hooks
-    uses: ScribeMD/pre-commit-action/.github/workflows/test.yaml@0.9.79
+    uses: ScribeMD/pre-commit-action/.github/workflows/test.yaml@0.9.82
     secrets:
       SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
       SLACK_ACTIONS_CHANNEL_ID: ${{ secrets.SLACK_ACTIONS_CHANNEL_ID }}
