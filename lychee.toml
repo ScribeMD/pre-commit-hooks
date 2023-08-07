@@ -1,1 +1,2 @@
 exclude_mail = true
+max_retries = 4
