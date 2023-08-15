@@ -25,13 +25,13 @@ Hooks for Use With the [pre-commit](https://pre-commit.com) Framework
     - [`poetry-lock`](#poetry-lock)
     - [`poetry-install`](#poetry-install)
     - [`pre-commit-install`](#pre-commit-install)
-    - [`megalinter-incremental`](#megalinter-incremental)
-    - [`megalinter-full`](#megalinter-full)
     - [`yarn-install`](#yarn-install)
     - [`yarn-dedupe`](#yarn-dedupe)
     - [`yarn-audit`](#yarn-audit)
     - [`yarn-build`](#yarn-build)
     - [`yarn-test`](#yarn-test)
+    - [`megalinter-incremental`](#megalinter-incremental)
+    - [`megalinter-full`](#megalinter-full)
   - [Changelog](#changelog)
 
 <!--TOC-->
@@ -85,6 +85,34 @@ Install pre-commit hooks by running
 See also the documentation for
 [`default_install_hook_types`](https://pre-commit.com/#top_level-default_install_hook_types).
 
+### `yarn-install`
+
+Install Yarn dependencies, and update `yarn.lock` by running
+[`yarn install`](https://yarnpkg.com/cli/install).
+
+### `yarn-dedupe`
+
+Deduplicate Yarn dependencies by running
+[`yarn dedupe`](https://yarnpkg.com/cli/dedupe).
+
+### `yarn-audit`
+
+Perform security audit of Yarn dependencies by running
+[`yarn npm audit --all --recursive`](https://yarnpkg.com/cli/npm/audit).
+
+### `yarn-build`
+
+Run the `"build"` script in `package.json` via
+[`yarn run build`](https://yarnpkg.com/cli/run).
+
+### `yarn-test`
+
+Run the `"test"` script in `package.json` via
+[`yarn run test --passWithNoTests --findRelatedTests`](https://yarnpkg.com/cli/run).
+Useful for running
+[Jest tests that check the modified files](https://jestjs.io/docs/cli#--findrelatedtests-spaceseparatedlistofsourcefiles),
+but the flag can be overridden.
+
 ### `megalinter-incremental`
 
 This hook is intended for MegaLinter v6. Run
@@ -121,34 +149,6 @@ See the documentation for
 [`mega-linter-runner`](https://megalinter.io/latest/mega-linter-runner/#usage)
 and
 [MegaLinter configuration](https://megalinter.io/latest/configuration/).
-
-### `yarn-install`
-
-Install Yarn dependencies, and update `yarn.lock` by running
-[`yarn install`](https://yarnpkg.com/cli/install).
-
-### `yarn-dedupe`
-
-Deduplicate Yarn dependencies by running
-[`yarn dedupe`](https://yarnpkg.com/cli/dedupe).
-
-### `yarn-audit`
-
-Perform security audit of Yarn dependencies by running
-[`yarn npm audit --all --recursive`](https://yarnpkg.com/cli/npm/audit).
-
-### `yarn-build`
-
-Run the `"build"` script in `package.json` via
-[`yarn run build`](https://yarnpkg.com/cli/run).
-
-### `yarn-test`
-
-Run the `"test"` script in `package.json` via
-[`yarn run test --passWithNoTests --findRelatedTests`](https://yarnpkg.com/cli/run).
-Useful for running
-[Jest tests that check the modified files](https://jestjs.io/docs/cli#--findrelatedtests-spaceseparatedlistofsourcefiles),
-but the flag can be overridden.
 
 ## Changelog
 
