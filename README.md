@@ -39,7 +39,7 @@ Hooks for Use With the [pre-commit](https://pre-commit.com) Framework
 Pre-commit only supports [Git](https://git-scm.com/) and no other version
 control system (VCS). The defaults for the [Yarn](https://yarnpkg.com/) hooks
 are configured for use with a
-[Zero-Installs](https://yarnpkg.com/features/zero-installs)
+[Zero-Installs](https://yarnpkg.com/features/caching#zero-installs)
 [TypeScript](https://www.typescriptlang.org/) project. They assume Yarn and
 [Node.js](https://nodejs.org/) are managed by [asdf](https://asdf-vm.com/), but
 the file patterns may be overridden.
