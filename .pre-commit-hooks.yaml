@@ -120,6 +120,18 @@
     https://yarnpkg.com/cli/npm/audit for more details.
   args: [--all, --recursive]
 
+- id: yarn-sdks
+  name: Generate Yarn SDKs
+  entry: src/yarn-sdks.sh
+  language: script
+  files: \.yarn/sdks/|yarn(-(\d+\.){2}\d+\.cjs|\.lock)
+  pass_filenames: false
+  description: >
+    Generate SDKs and settings for editors specified in
+    `.yarn/sdks/integrations.yml`. Format VSCode settings with Prettier to
+    prevent formatting conflicts with MegaLinter. See
+    https://yarnpkg.com/sdks/cli/default for more details.
+
 - id: yarn-build
   name: Build the app
   entry: yarn run build
