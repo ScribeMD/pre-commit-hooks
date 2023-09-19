@@ -28,6 +28,7 @@ Hooks for Use With the [pre-commit](https://pre-commit.com) Framework
     - [`yarn-install`](#yarn-install)
     - [`yarn-dedupe`](#yarn-dedupe)
     - [`yarn-audit`](#yarn-audit)
+    - [`yarn-sdks`](#yarn-sdks)
     - [`yarn-build`](#yarn-build)
     - [`yarn-test`](#yarn-test)
     - [`megalinter-incremental`](#megalinter-incremental)
@@ -99,6 +100,14 @@ Deduplicate Yarn dependencies by running
 
 Perform security audit of Yarn dependencies by running
 [`yarn npm audit --all --recursive`](https://yarnpkg.com/cli/npm/audit).
+
+### `yarn-sdks`
+
+Generate SDKs and settings for editors specified in
+`.yarn/sdks/integrations.yml` by running
+[`yarn run sdks && yarn run prettier --write .vscode/settings.json`](https://yarnpkg.com/sdks/cli/default).
+Format VSCode settings with Prettier to prevent formatting conflicts with
+MegaLinter.
 
 ### `yarn-build`
 
