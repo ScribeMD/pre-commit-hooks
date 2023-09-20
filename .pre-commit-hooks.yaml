@@ -103,7 +103,7 @@
   name: Deduplicate Yarn dependencies
   entry: yarn dedupe
   language: system
-  files: \.tool-versions|package\.json|yarn(-*\.cjs|\.lock)
+  files: \.tool-versions|package\.json|yarn(-(\d+\.){2}\d+\.cjs|\.lock)
   pass_filenames: false
   description: >
     Remove all but the highest version of any duplicates. More than one version
@@ -124,7 +124,7 @@
   name: Build the app
   entry: yarn run build
   language: system
-  files: \.tool-versions|package\.json|yarn(-*\.cjs|\.lock)|.*\.ts
+  files: \.tool-versions|package\.json|yarn(-(\d+\.){2}\d+\.cjs|\.lock)|.*\.ts
   pass_filenames: false
   description: >
     Compile TypeScript files to JavaScript. See https://yarnpkg.com/cli/run for
