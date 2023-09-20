@@ -17,7 +17,7 @@ repos:
 
   ## Python, Polyglot, Git, pre-commit
   - repo: https://github.com/ScribeMD/pre-commit-hooks
-    rev: 0.15.10 # automatically updated by Commitizen
+    rev: 0.16.0 # automatically updated by Commitizen
     hooks:
       - id: no-merge-commits
       - id: asdf-install
