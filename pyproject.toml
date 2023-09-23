@@ -10,7 +10,7 @@ build-backend = "poetry.core.masonry.api"
 
   [tool.poetry]
   name = "pre-commit-hooks"
-  version = "0.16.0"
+  version = "0.16.1"
   description = "Hooks for Use With the pre-commit Framework"
   authors = ["Kurt von Laven <kurt.von.laven@gmail.com>"]
   license = "MIT"
