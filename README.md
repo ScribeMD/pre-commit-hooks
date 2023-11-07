@@ -129,7 +129,7 @@ This hook is intended for MegaLinter v6. Run
 by running:
 
 ```sh
-npx -- mega-linter-runner@v7.4.0 \
+npx -- mega-linter-runner@v7.5.0 \
   --container-name megalinter-incremental \
   --remove-container \
   --fix \
@@ -147,7 +147,7 @@ and
 This hook is intended for MegaLinter v6. Run MegaLinter by running:
 
 ```sh
-npx -- mega-linter-runner@v7.4.0 \
+npx -- mega-linter-runner@v7.5.0 \
   --container-name megalinter-full \
   --remove-container \
   --fix \
