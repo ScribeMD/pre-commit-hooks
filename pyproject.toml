@@ -9,6 +9,7 @@ build-backend = "poetry.core.masonry.api"
   major_version_zero = true
 
   [tool.poetry]
+  package-mode = false
   name = "pre-commit-hooks"
   version = "0.16.3"
   description = "Hooks for Use With the pre-commit Framework"
